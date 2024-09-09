@@ -11,4 +11,16 @@ For example, if the input is:
 The output should be:
 {'odd': [3, 5], 'even': [2, 4, 6]}
 '''
+def collect_numbers():
+    numbers = {'odd': [], 'even': []}
 
+    while True:
+        num = int(input("Enter an integer (0 to stop): "))
+        if num == 0:
+            break
+        if num % 2 == 0:
+            numbers['even'].append(num)
+        else:
+            numbers['odd'].append(num)
+    print(numbers)
+collect_numbers()
